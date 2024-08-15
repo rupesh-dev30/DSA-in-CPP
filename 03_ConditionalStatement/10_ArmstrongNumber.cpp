@@ -20,3 +20,8 @@ int main() {
 
   return 0;
 }
+
+
+
+
+//Read up about the difference between typedef (keyword), macros & const (keyword) in C++.
