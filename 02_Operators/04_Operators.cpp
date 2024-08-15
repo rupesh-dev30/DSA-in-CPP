@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main()
-{
+int main(){
   // code here
   int a = 10;
   int b = 20;
@@ -69,10 +68,34 @@ int main()
   cout << "Post-Increment: p = " << p << "; p++ = " << p++ << "; After increment, p = " << p << endl;
   cout << "Post-Decrement: p = " << p << "; p-- = " << p-- << "; After decrement, p = " << p << endl;
 
+  // Relational Operators
+  cout << "Relational Operators:" << endl;
+
+  cout << a << " == " << b << " : " << (a == b ? "true" : "false") << endl; // Equal to
+  cout << a << " != " << b << " : " << (a != b ? "true" : "false") << endl; // Not equal to
+  cout << a << " > " << b << " : " << (a > b ? "true" : "false") << endl;   // Greater than
+  cout << a << " < " << b << " : " << (a < b ? "true" : "false") << endl;   // Less than
+  cout << a << " >= " << b << " : " << (a >= b ? "true" : "false") << endl; // Greater than or equal to
+  cout << a << " <= " << b << " : " << (a <= b ? "true" : "false") << endl; // Less than or equal to
+
+  // Logical Operators
+  bool condition1 = (a < b);  // true
+  bool condition2 = (a == b); // false
+
+  cout << "Logical Operators:" << endl;
+
+  // Logical AND (&&)
+  cout << "Logical AND: (" << condition1 << " && " << condition2 << ") = " << (condition1 && condition2 ? "true" : "false") << endl;
+
+  // Logical OR (||)
+  cout << "Logical OR: (" << condition1 << " || " << condition2 << ") = " << (condition1 || condition2 ? "true" : "false") << endl;
+
+  // Logical NOT (!)
+  cout << "Logical NOT: !(" << condition1 << ") = " << (!condition1 ? "true" : "false") << endl;
+  cout << "Logical NOT: !(" << condition2 << ") = " << (!condition2 ? "true" : "false") << endl;
+
   return 0;
 }
-
-
 
 /*
     Symbols that tell compiler to perform some operation
