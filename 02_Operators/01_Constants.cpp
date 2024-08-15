@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #define X = 25
+#define ll long long
 using namespace std;
 
 int main() {
@@ -12,6 +13,9 @@ int main() {
 
     const string name1 = "Rupesh";
     cout << name1 << endl;
+
+    ll y = 20;
+    cout<<sizeof(y)<<endl;
 
     return 0;
 }
