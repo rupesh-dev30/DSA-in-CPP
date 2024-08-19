@@ -31,5 +31,14 @@ int main() {
   return 0;
 }
 
-// Time complexities: log(n)
-// Space complexities: O(1)
+/*
+    Time complexities: log(n)
+      1 =  n / 2^n = 
+      n = 2^n
+      log(n) = n   (logbase 2)
+
+      n -> iteration...
+
+    Space complexities: O(1)
+
+*/
