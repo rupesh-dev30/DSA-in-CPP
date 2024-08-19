@@ -13,8 +13,11 @@ int main() {
 
   float pi = 3.14;
   float *ptr1 = &pi;
-  cout << ptr1 << endl; 
-  cout << *ptr1 << endl; 
+  cout << ptr1 << endl;
+  cout << *ptr1 << endl;
+
+  cout << sizeof(ptr) << endl;
+  cout << sizeof(ptr1) << endl;
 
   return 0;
 }
