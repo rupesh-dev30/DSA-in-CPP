@@ -16,8 +16,12 @@ int main() {
   cout << b[1] << endl;
   cout << c << endl;
 
+  cout << sizeof(b) / sizeof(int);
+
   return 0;
 }
+
+// Memory is statically allocated at compile time
 
 /*
     Arrays:
