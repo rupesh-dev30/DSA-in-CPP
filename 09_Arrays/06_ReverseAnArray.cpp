@@ -2,6 +2,9 @@
 using namespace std;
 
 void reverse(int arr[], int n, int reverseArray[]){
+  // Space complexities: O(n);
+  // Time complexities: O(n);
+
   int j = 0;
 
   for(int i=n-1; i>=0; i--){
@@ -10,6 +13,9 @@ void reverse(int arr[], int n, int reverseArray[]){
 }
 
 void reverse(int arr[], int n){
+  // Space complexities: O(1);
+  // Time complexities: O(n/2) -> O(n);
+
   int j = n - 1;
   for(int i=0; i<n/2; i++){
     swap(arr[i], arr[j--]);
