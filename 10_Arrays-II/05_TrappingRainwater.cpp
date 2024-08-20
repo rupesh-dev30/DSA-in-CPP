@@ -47,3 +47,8 @@ int main() {
 
   return 0;
 }
+
+// Time complexity: O(n)
+// Space complexity: O(n)
+
+// The time complexity of the trappingRainwater function is O(n) because we iterate through the height array three times, each time with a linear time complexity. The space complexity is O(n) as well because we use two additional arrays of size n (leftMax and rightMax) to store the maximum height to the left and right of each element in the height array.
