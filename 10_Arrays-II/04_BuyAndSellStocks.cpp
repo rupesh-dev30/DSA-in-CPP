@@ -29,3 +29,11 @@ int main() {
 
   return 0;
 }
+
+
+// Time complexity: O(n)
+// Space complexity: O(n)
+
+// The time complexity of the maxProfit function is O(n) because we iterate through the array of prices once to calculate the best buy price and then again to calculate the profit for each day. 
+
+// The space complexity is O(n) as well because we are using an additional array of size n (bestBuy) to store the best buy price for each day.
