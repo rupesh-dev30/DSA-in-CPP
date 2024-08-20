@@ -17,6 +17,5 @@ int main() {
 
 /*
     Pointer Arithmetic
-
     Addition and Subtraction of constants
 */
