@@ -2,25 +2,52 @@
 using namespace std;
 
 void bubbleSort(int *arr, int n) {
-  for(int i=0; i<n-1; i++){
-    for(int j=0; j<n-1-i; j++){
-      if(arr[j] > arr[j+1]){
-        swap(arr[j], arr[j+1]);
+  for (int i = 0; i < n - 1; i++) {
+    for (int j = 0; j < n - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        swap(arr[j], arr[j + 1]);
       }
     }
   }
 }
 
+void optimizeBubbleSort(int *arr, int n) {
+  for (int i = 0; i < n - 1; i++) {
+    // cout << "Outer loop: ";
+    bool isSwap = false;
+    for (int j = 0; j < n - i - 1; j++) {
+      // cout << "Inner loop :";
+      if (arr[j] > arr[j + 1]) {
+        swap(arr[j], arr[j + 1]);
+        isSwap = true;
+      }
+    }
+
+    if (!isSwap) {
+      return;
+    }
+  }
+}
+
+void printArr(int *arr, int n) {
+  for (int i = 0; i < n; i++) {
+    cout << arr[i] << " ";
+  }
+  cout<<endl;
+}
+
 int main() {
   // code here
-  int arr[] = {8,6,7,9,4,3,5,1,2};
+  int arr[] = {8, 6, 7, 9, 4, 3, 5, 1, 2};
   int size = 8;
 
   bubbleSort(arr, size);
+  printArr(arr, size);
 
-  for(int i=0; i<size; i++){
-    cout << arr[i] << " ";
-  }
+  int arr2[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  int size2 = 9;
+  optimizeBubbleSort(arr2, size2);
+  printArr(arr2, size2);
 
   return 0;
 }
