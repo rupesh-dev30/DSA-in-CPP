@@ -7,7 +7,17 @@ void insertionSort(char ch[], int n) {
     char curr = ch[i];
     int prev = i - 1;
 
-    while (prev >= 0 && ch[prev] > curr) {
+    //Ascending order
+    
+    // while (prev >= 0 && ch[prev] > curr) {
+    //   swap(ch[prev], ch[prev + 1]);
+    //   prev--;
+    // }
+
+
+    //Descending order
+
+    while (prev >= 0 && ch[prev] < curr) {
       swap(ch[prev], ch[prev + 1]);
       prev--;
     }
