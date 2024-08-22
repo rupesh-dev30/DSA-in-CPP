@@ -20,11 +20,17 @@ void spiralMatrix(int matrix[][4], int n, int m) {
 
     // Bottom
     for (int j = eCol - 1; j >= sCol; j--) {
+      if(sRow == eRow){
+        break;  // middle
+      }
       cout << matrix[eRow][j] << " ";
     }
 
     // Left
     for (int i = eRow - 1; i >= sRow + 1; i--) {
+      if(sCol == eCol){
+        break;  // middle
+      }
       cout << matrix[i][sCol] << " ";
     }
 
@@ -33,13 +39,26 @@ void spiralMatrix(int matrix[][4], int n, int m) {
     sCol++;
     eCol--;
   }
+  cout << endl
+       << endl;
 }
 
 int main() {
   // code here
-  int arr[4][4] = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+  int arr[4][4] = {
+      {1, 2, 3, 4},
+      {5, 6, 7, 8},
+      {9, 10, 11, 12},
+      {13, 14, 15, 16}};
 
   spiralMatrix(arr, 4, 4);
+
+  int arr2[3][4] = {
+      {1, 2, 3, 4},
+      {5, 6, 7, 8},
+      {9, 10, 11, 12}};
+
+  spiralMatrix(arr2, 3, 4);
 
   return 0;
 }
