@@ -4,10 +4,10 @@ using namespace std;
 int diagonalSum(int arr[][4], int n) {
   int sum = 0;
 
-  // primary sum
-  //  for(int i=0; i<n; i++){
-  //    sum += arr[i][i];
-  //  }
+  /*
+
+  // Time Complexities: O(n^2)
+  // Worst Case
 
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
@@ -18,6 +18,19 @@ int diagonalSum(int arr[][4], int n) {
       }
     }
   }
+
+  */
+
+
+  // Time Complexities: O(n)
+  // Optimized Code
+  for (int i = 0; i < n; i++) {
+    sum += arr[i][i];  // primary diagonal
+    if(i != n-i-1){
+      sum += arr[i][n-i-1];  // secondary diagonal
+    }
+  }
+
   return sum;
 }
 
