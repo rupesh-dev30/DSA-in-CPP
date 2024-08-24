@@ -9,12 +9,14 @@ int main() {
   // 5 -> size filled with -1
 
   cout << "size: " << v2.size() << endl;
-  cout << "capacity: "<<v2.capacity()<<endl;
+  cout << "capacity: " << v2.capacity() << endl;
 
   v2.push_back(5);
-  
+
   cout << "size: " << v2.size() << endl;
-  cout << "capacity: "<<v2.capacity()<<endl;
+  cout << "capacity: " << v2.capacity() << endl;
+
+  v2.pop_back(); // delete from last
 
   return 0;
 }
