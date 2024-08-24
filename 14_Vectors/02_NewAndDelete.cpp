@@ -45,3 +45,14 @@ int main() {
 
   return 0;
 }
+
+/*
+
+    Memory Leak: 
+
+      A memory leak occurs when programmers create a memory in a heap and forget to delete it. 
+
+      Leaps to reduced performance due to depletion of available memory.
+
+*/
+
