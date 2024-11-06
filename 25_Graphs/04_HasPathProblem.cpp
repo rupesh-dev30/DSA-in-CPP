@@ -39,6 +39,30 @@ public:
     vector<bool> visited(V, false);
     return pathHelper(src, dest, visited);
   }
+
+  bool hasPathBFS(int src, int dest){
+    vector<bool> visited(V, false);
+    queue<int> q;
+    q.push(src);
+    visited[src] = true;
+
+    while(!q.empty()){
+      int node = q.front();
+      q.pop();
+
+      if(node == dest) {
+        return true;
+      }
+
+      for(int neighbour : l[node]){
+        if(!visited[neighbour]){
+          q.push(neighbour);
+          visited[neighbour] = true;
+        }
+      }
+    }
+    return false;
+  }
 };
 
 int main() {
@@ -56,6 +80,8 @@ int main() {
   graph.addEdge(5, 6);
 
   cout << graph.hasPath(5, 6) << endl;
+  cout << graph.hasPathBFS(5, 6) << endl;
+
 
   return 0;
 }
