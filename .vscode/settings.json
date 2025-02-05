@@ -3,6 +3,19 @@
     "*.ejs": "html",
     "iostream": "cpp",
     "tuple": "cpp",
-    "vector": "cpp"
+    "vector": "cpp",
+    "*.tcc": "cpp",
+    "charconv": "cpp",
+    "chrono": "cpp",
+    "expected": "cpp",
+    "optional": "cpp",
+    "format": "cpp",
+    "ratio": "cpp",
+    "system_error": "cpp",
+    "array": "cpp",
+    "functional": "cpp",
+    "regex": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp"
   }
 }

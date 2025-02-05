@@ -1,0 +1,33 @@
+In C++, `set` and `unordered_set` are both associative containers used to store unique elements, but they have significant differences in implementation, ordering, and performance.
+
+ 1. Implementation
+   - `set`: Implemented using a Red-Black Tree (Self-Balancing Binary Search Tree).
+   - `unordered_set`: Implemented using a Hash Table.
+
+ 2. Ordering
+   - `set`: Stores elements in sorted order (ascending by default).
+   - `unordered_set`: Stores elements in no particular order.
+
+ 3. Time Complexity
+   +-------------------------------------------------------------------------------------------+
+   | Operation  | `set` (RB Tree) | `unordered_set` (Hash Table)                               |
+   |------------|-----------------|------------------------------------------------------------|
+   | Insert     | O(log N)        | O(1) (Average), O(N) (Worst Case - due to hash collisions) |
+   | Erase      | O(log N)        | O(1) (Average), O(N) (Worst Case)                          |
+   | Search     | O(log N)        | O(1) (Average), O(N) (Worst Case)                          |
+   +-------------------------------------------------------------------------------------------+
+
+   - `unordered_set` generally provides faster access because hash table operations are on average O(1), while `set` operations are O(log N).
+   - Worst-case performance for `unordered_set` happens when many keys hash to the same bucket (collision handling).
+
+ 4. Memory Usage
+   - `set` uses less memory since it only stores tree nodes.
+   - `unordered_set` uses more memory due to hash table overhead.
+
+ 5. Use Cases
+   - Use `set` when ordering is required.
+   - Use `unordered_set` when fast lookup is more important than ordering.
+
+ Conclusion
+- Use `set` when ordering matters.
+- Use `unordered_set` when performance (O(1) lookup) is a priority.
