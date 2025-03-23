@@ -88,12 +88,10 @@ int main() {
     }
     
     return 0;
-    
 }
 
 
 /*
-
     This problem is to get you familiar with virtual functions. Create three classes Person, Professor and Student. The class Person should have data members name and age. The classes Professor and Student should inherit from the class Person.
 
     The class Professor should have two integer members: publications and cur_id. There will be two member functions: getdata and putdata. The function getdata should get the input from the user: the name, age and publications of the professor. The function putdata should print the name, age, publications and the cur_id of the professor.
@@ -138,5 +136,4 @@ int main() {
     Jesse 18 403 1
     Pinkman 22 135 2
     White 58 87 2
-
 */
