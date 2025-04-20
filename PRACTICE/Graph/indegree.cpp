@@ -61,11 +61,3 @@ int main() {
 
   return 0;
 }
-
-/*
-    Topological Sorting
-
-      used for Directed Acyclic Graphs (DAG)
-
-      Linear order of vetices such that for every u -> v, u comes before v in sequence
-*/
