@@ -1,6 +1,6 @@
 /*
                     LIBRARY MANAGEMENT SYSTEM
-    ============================================================
+    ======================================================
 
     PROBLEM STATEMENT: WE ARE BUILDING A LIBRARY MANAGEMENT SYSTEM WHERE WE CAN MANAGE BOOKS, MEMBERS AND TRANSACTIONS
 
