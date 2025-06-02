@@ -1,0 +1,16 @@
+What is AVL Tree?
+AVL Tree ek Binary Search Tree hoti hai jisme:
+
+Har node ke left aur right subtree ke height difference (balance factor) max -1, 0 ya +1 hota hai.
+
+Agar yeh condition violate ho, toh hum rotation use karke usse balance karte hain.
+
+AVL = Adelson-Velsky and Landis (inventors)
+
+
+Balance Factor (BF):
+  BF = height(left subtree) - height(right subtree)
+
+  BF ∈ {-1, 0, +1} → Tree is balanced
+
+  BF < -1 or BF > 1 → Tree is unbalanced, rotation chahiye

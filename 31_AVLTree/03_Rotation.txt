@@ -1,0 +1,127 @@
+
+
+    LL Rotation (Right Rotate)
+
+    RR Rotation (Left Rotate)
+
+    LR Rotation (Left Right Rotate)
+
+    RL Rotation (Right Left Rotate)
+
+    🔹 Why Rotations?
+          Agar Balance Factor (BF) of a node:
+
+              > 1 → Left heavy
+
+              < -1 → Right heavy
+
+          Tab hume rotate karna padta hai to maintain AVL property.
+
+    
+
+    1. Right Rotation (LL Rotation)
+
+        (New node) left subtree ke left child mein insert hua ho
+            BF > 1 aur key < node->left->key
+
+        
+                 z
+                / 
+               y
+              / 
+             x
+
+            Right Rotate(z) → y becomes new root
+
+
+        Node* rightRotate(Node* z) {
+            Node* y = z->left;
+            Node* T3 = y->right;
+
+            y->right = z;
+            z->left = T3;
+
+            updateHeight(z);
+            updateHeight(y);
+
+            return y;
+        }
+
+
+
+    2. Left Rotation (RR Rotation)
+
+        (New node) right subtree ke right child mein insert hua ho
+
+            BF < -1 aur key > node->right->key
+
+
+              z
+               \
+                y
+                 \
+                  x
+
+            Left Rotate(z) → y becomes new root
+
+        
+        Node* leftRotate(Node* z) {
+            Node* y = z->right;
+            Node* T2 = y->left;
+
+            y->left = z;
+            z->right = T2;
+
+            updateHeight(z);
+            updateHeight(y);
+
+            return y;
+        }
+
+    
+    3. Left Right Rotation (LR Rotation)
+
+        (New node) left subtree ke right child mein insert hua ho
+
+            BF > 1 aur key > node->left->key
+
+        
+             z
+            /
+           y
+            \
+             x
+
+            First: Left Rotate(y)  
+            Then: Right Rotate(z)
+
+        
+
+        Node* leftRightRotate(Node* z) {
+            z->left = leftRotate(z->left);
+            return rightRotate(z);
+        }
+
+
+    4. Right Left Rotation (RL Rotation)
+
+        New node right subtree ke left child mein insert hua ho
+
+            BF < -1 aur key < node->right->key
+
+        
+              z
+               \
+                y
+               /
+              x
+
+            First: Right Rotate(y)  
+            Then: Left Rotate(z)
+            
+
+        Node* rightLeftRotate(Node* z) {
+            z->right = rightRotate(z->right);
+            return leftRotate(z);
+        }
+
