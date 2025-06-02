@@ -1,0 +1,15 @@
+N-ary Tree Kya Hota Hai?
+
+ - N-ary tree ek aisa tree hota hai jismein har node ke paas 'N' tak children ho sakte hain.
+ - Agar N = 2 ho toh ye Binary Tree ban jata hai.
+ - Par N-ary tree mein koi fixed limit nahi hoti, bas maximum N tak child ho sakte hain.
+
+           1
+        /  |  \
+       2   3   4
+      / \      |
+     5   6     7
+
+  Node 1 have 3 children
+  Node 2 have 2 children
+  Node 4 have 1 children
