@@ -1,0 +1,65 @@
+Problem:
+
+Aapke paas ek array hai arr[] of size n, aur aapko baar-baar do operations karne hain:
+
+    Range Query: Kisi bhi range L to R ka sum/min/max nikalna.
+
+    Update Operation: Kisi bhi index par value update karna.
+
+
+Naive Way:
+    Range Query: Loop from L to R → O(n)
+
+    Update: O(1)
+
+If queries bahut zyada hoon → Slow
+
+  Segment Tree:
+    
+    Query: O(log n)
+
+    Update: O(log n)
+
+    Space: O(4 * n) (safe size)
+
+
+BUILDING A SEGMENT TREE
+
+  Example: 
+                          0  1  2  3  4  
+                        [ 3  1  2  7  1 ]
+
+
+                            14 (0,4) 
+                          /          \
+                         /            \
+                        /              \
+                6 (0,2)                 8 (3,4)
+               /       \                /     \
+              /         \              /       \ 
+             /           \            /         \
+      4 (0,1)          2 (2,2)      7 (3,3)   1 (4,4)
+      /     \          
+     /       \        
+    /         \       
+3 (0,0)   1 (1,1)  
+
+
+
+NOTES:    
+    1. Binary Tree
+    2. 2 Children of all non leaf node
+    3. Leaf Nodes -> Represent a single element in an array
+       Root Node  -> Represent entire array
+       Other nodes -> Represent an interval or range of an array
+    4. Height [logn] 
+    5. Height left - height right <= 1
+    6. Balance Binary Tree
+
+
+    7. TOTAL NUMBER OF NODE IN A SEGMENT TREE ARE
+
+        N + N/2 + N/4 ... 1
+
+        Sum = 2 * N (if power of 2)
+        Sum = 2 * N - 1 
